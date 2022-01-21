@@ -15,6 +15,22 @@
       "telefono": "1123586276",
       "notas": "Coordinadora ",
       "id": 2
+    },
+    {
+      "nombre": "Hele Ramirez",
+      "empresa": "RAMACO",
+      "email": "helenatorres@gmail.com",
+      "telefono": "1232123123",
+      "notas": "Nathing",
+      "id": 3
+    },
+    {
+      "nombre": "Ricardo Carrullo",
+      "empresa": "INDI",
+      "email": "rcarrullo@gmail.com",
+      "telefono": "12314575233",
+      "notas": "Cliente Recomendado",
+      "id": 4
     }
   ]
 }

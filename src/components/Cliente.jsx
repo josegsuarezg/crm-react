@@ -1,6 +1,8 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Cliente = ({cliente}) => {
+  
+  const navigate = useNavigate();
   
   const {nombre, email, telefono, empresa, notas, id} = cliente
   
@@ -31,19 +33,20 @@ const Cliente = ({cliente}) => {
       <td className="mb-5">
         <button
           type="button"
-          className=" bg-yellow-600 hover:bg-yellow-700 text-white font-bold block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
+          className=" bg-yellow-600 hover:bg-yellow-700 text-white font-bold md:block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
+          onClick={() => navigate(`/clientes/${id}`)}
         >
           Ver
         </button>
         <button
           type="button"
-          className=" bg-blue-600 hover:bg-blue-700 text-white font-bold block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
+          className=" bg-blue-600 hover:bg-blue-700 text-white font-bold md:block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
         >
           Editar
         </button>
         <button
           type="button"
-          className=" bg-red-600 hover:bg-red-700 text-white font-bold block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
+          className=" bg-red-600 hover:bg-red-700 text-white font-bold md:block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
         >
           Borrar
         </button>

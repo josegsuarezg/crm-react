@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Inicio from './paginas/Inicio';
+import VerCliente from './paginas/VerCliente';
 import NuevoCliente from './paginas/NuevoCliente';
 import EditarCliente from './paginas/EditarCliente';
 
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Inicio />} />
           <Route path="nuevo" element={<NuevoCliente />} />
           <Route path="editar/:id" element={<EditarCliente />} />
+          <Route path=":id" element={<VerCliente />} />
         </Route>
         
       </Routes>
