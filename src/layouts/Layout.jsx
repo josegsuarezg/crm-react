@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <div className="md:flex md:min-h-screen">
       <div className="md:w-1/4 bg-blue-900 px-5 py-10">
-        <h2 className="text-4xl text-center text-white font-black">
+        <h2 className="text-2xl md:text-4xl text-center text-white font-black">
           CRM - Clientes
         </h2>
         <nav className="mt-10">
@@ -16,7 +16,7 @@ const Layout = () => {
             to="/clientes"
             className={`${
               urlActual === '/clientes' ? 'text-blue-300' : 'text-white'
-            } text-2xl block mt-2 hover:text-blue-300`}
+            } text-xl md:text-2xl block mt-2 hover:text-blue-300`}
           >
             Clientes
           </Link>
@@ -24,7 +24,7 @@ const Layout = () => {
             to="/clientes/nuevo"
             className={`${
               urlActual === '/clientes/nuevo' ? 'text-blue-300' : 'text-white'
-            } text-2xl block mt-2 hover:text-blue-300`}
+            } text-xl md:text-2xl block mt-2 hover:text-blue-300`}
           >
             Nuevo Cliente
           </Link>
