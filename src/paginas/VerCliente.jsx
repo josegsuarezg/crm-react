@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
+import Spinner from '../components/Spinner';
 
 const VerCliente = () => {
   
   const [cliente, setCliente] = useState({});
+  const [cargando, setCargando] = useState(true);
   const {id} = useParams();
   
   useEffect(() => {
@@ -17,6 +19,7 @@ const VerCliente = () => {
       } catch (error) {
         console.log(error);
       }
+      setCargando(!cargando);
     }
     obtenerCliente();
   }, []);
@@ -24,11 +27,12 @@ const VerCliente = () => {
   const {nombre, email, telefono, empresa, notas} = cliente
   
   return (
+    cargando ? <Spinner/> : Object.keys(cliente).length === 0 ? <p>No Hay Resultados</p> : (
+      
     <div className="container bg-white w-full mx-auto my-0 shadow-md rounded-md">
       <h1 className="font-black text-2xl md:text-3xl text-blue-900 text-center pt-10 mb-10">
         Información del Cliente {nombre}
       </h1>
-
       <div className="pb-10">
         <p className="text-center text-xl md:text-2xl p-2 mb-4 md:text-left md:ml-5 ">
           <span className="uppercase text-gray-600 font-bold">
@@ -64,7 +68,8 @@ const VerCliente = () => {
         )}
       </div>
     </div>
-  );
+    )
+  )
 };
 
 export default VerCliente;

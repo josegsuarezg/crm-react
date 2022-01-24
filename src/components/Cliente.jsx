@@ -1,11 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
-const Cliente = ({cliente}) => {
-  
+const Cliente = ({ cliente, handleEliminar }) => {
   const navigate = useNavigate();
-  
-  const {nombre, email, telefono, empresa, notas, id} = cliente
-  
+
+  const { nombre, email, telefono, empresa, notas, id } = cliente;
+
   return (
     <tr className="text-center mb-8 flex flex-col justify-center items-center border-b-4 md:table-row md:h-20">
       <td className="m-0">
@@ -41,12 +40,14 @@ const Cliente = ({cliente}) => {
         <button
           type="button"
           className=" bg-blue-600 hover:bg-blue-700 text-white font-bold md:block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
+          onClick={() => navigate(`/clientes/editar/${id}`)}
         >
           Editar
         </button>
         <button
           type="button"
           className=" bg-red-600 hover:bg-red-700 text-white font-bold md:block px-2 py-1 rounded-md cursor-pointer w-full mb-1"
+          onClick={() => handleEliminar(id)}
         >
           Borrar
         </button>
