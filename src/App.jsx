@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Inicio from './paginas/Inicio';
@@ -8,6 +7,7 @@ import EditarCliente from './paginas/EditarCliente';
 
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Routes>

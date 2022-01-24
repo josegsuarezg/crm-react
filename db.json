@@ -7,14 +7,6 @@
       "telefono": "1123449703",
       "notas": "Empresa de Servicios",
       "id": 1
-    },
-    {
-      "nombre": "Gladys Perera",
-      "empresa": "PereraCorp",
-      "email": "inggladysperera@gmail.com",
-      "telefono": "1123586276",
-      "notas": "Coordinadora ",
-      "id": 2
     }
   ]
 }
